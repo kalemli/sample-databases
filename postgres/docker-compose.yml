@@ -2,13 +2,11 @@ name: samples
 
 services:
   postgres:
-    image: postgres:15-alpine
+    image: postgres:14-alpine
     container_name: postgres_db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 123456
       POSTGRES_DB: dvdrental
     ports:
-      - "5433:5432"
-    # volumes:
-    #   - ./init_db.sh:/init_db.sh
+      - "5432:5432"
